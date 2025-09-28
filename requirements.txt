@@ -1,0 +1,11 @@
+FastAPI
+uvicorn
+tensorflow
+numpy
+pillow
+jinja2
+python-multipart
+opencv-python
+scikit-learn
+matplotlib
+torch

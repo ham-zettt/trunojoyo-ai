@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batik Generation - Trunojoyo AI</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body class="font-inter bg-gradient-to-br from-amber-50 to-orange-50 text-gray-900">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="../">
+                    <div class="flex items-center space-x-2">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">T</span>
+                        </div>
+                        <div class="text-2xl font-bold">
+                            <span class="text-gray-900">Trunojoyo</span>
+                            <span class="text-blue-600">AI</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-8">
+                    <!-- Penelitian Dropdown -->
+                    <li class="relative group">
+                        <a href="#"
+                            class="text-blue-600 hover:text-blue-600 font-medium transition-colors duration-300 relative flex items-center">
+                            Penelitian
+                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-blue-600"></span>
+                        </a>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                            <div class="py-2">
+                                <a href="batik.html"
+                                    class="block px-4 py-3 text-blue-600 bg-blue-50 font-medium transition-colors duration-200">
+                                    <div class="font-medium">Batik Generation</div>
+                                </a>
+                                <a href="#sign"
+                                    class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                    <div class="font-medium">Bahasa Isyarat</div>
+                                </a>
+                                <a href="#face"
+                                    class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                    <div class="font-medium">Face Recognition</div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li><a href="../index.html#pendidikan"
+                            class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300 relative group">
+                            Pendidikan
+                            <span
+                                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                        </a></li>
+
+                    <li><a href="../index.html#pengabdian"
+                            class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300 relative group">
+                            Pengabdian
+                            <span
+                                class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                        </a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden flex flex-col space-y-1" id="mobile-menu-btn">
+                    <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden mt-4 pb-4 hidden" id="mobile-menu">
+                <ul class="space-y-4">
+                    <!-- Mobile Penelitian -->
+                    <li>
+                        <button
+                            class="flex items-center justify-between w-full text-left text-blue-600 font-medium transition-colors duration-300"
+                            id="mobile-penelitian-btn">
+                            <span>Penelitian</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" id="mobile-penelitian-icon"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul class="ml-4 mt-2 space-y-2" id="mobile-penelitian-submenu">
+                            <li><a href="batik.html"
+                                    class="flex items-center text-blue-600 font-medium transition-colors duration-300">
+                                    <span class="mr-2">🎨</span> Batik Generation
+                                </a></li>
+                            <li><a href="#sign"
+                                    class="flex items-center text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                    <span class="mr-2">🤟</span> Bahasa Isyarat
+                                </a></li>
+                            <li><a href="#face"
+                                    class="flex items-center text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                    <span class="mr-2">👤</span> Face Recognition
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#pendidikan"
+                            class="block text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Pendidikan</a>
+                    </li>
+                    <li><a href="../index.html#pengabdian"
+                            class="block text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Pengabdian</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 px-6">
+        <div class="container mx-auto text-center">
+            <div class="animate-fade-in-up">
+                <div
+                    class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-full text-sm font-medium mb-6">
+                    <span class="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
+                    WGAN Technology
+                </div>
+
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    <span class="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                        Batik Patch Generation
+                    </span>
+                </h1>
+
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Generasi motif batik Indonesia menggunakan Wasserstein Generative Adversarial Network (WGAN)
+                    untuk menciptakan pola batik yang unik dengan preservasi budaya tradisional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section id="generator" class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Generator Interface -->
+                <div class="bg-gradient-to-br from-white to-amber-50 p-8 rounded-2xl shadow-xl border border-amber-200">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 flex items-center">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center text-xl mr-3">
+                            🎨</div>
+                        Batik Generator
+                    </h2>
+                    <!-- Generation Controls -->
+                    <div class="space-y-6">
+                        <!-- Input Parameters - DISABLED -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Noise Dimension</label>
+                                <div
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-500">
+                                    128
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Batch Size</label>
+                                <div
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-500">
+                                    8
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Random Seed -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Random Seed (Optional)</label>
+                            <input type="number" placeholder="Leave empty for random seed"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        </div>
+
+                        <!-- Generate Button -->
+                        <button id="generateBtn"
+                            class="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold py-4 px-6 rounded-xl hover:from-amber-700 hover:to-orange-700 transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center">
+                            <span id="btnText">Generate 8 Batik Images</span>
+                            <svg id="btnIcon" class="ml-2 w-5 h-5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <!-- Loading Spinner (hidden by default) -->
+                            <div id="loadingSpinner"
+                                class="hidden ml-2 w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin">
+                            </div>
+                        </button>
+
+                        <!-- Progress Bar -->
+                        <div id="progressContainer" class="hidden">
+                            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>Generating 8 batik images...</span>
+                                <span id="progressText">0%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div id="progressBar"
+                                    class="bg-gradient-to-r from-amber-500 to-orange-500 h-2 rounded-full transition-all duration-300"
+                                    style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Generated Results -->
+                <div class="bg-gray-50 p-8 rounded-2xl border-2 border-dashed border-gray-300" id="resultContainer">
+                    <div id="emptyState" class="text-center py-12">
+                        <div
+                            class="w-24 h-24 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 animate-pulse-slow">
+                            🎨
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-2">Ready to Generate</h3>
+                        <p class="text-gray-500">Click "Generate Batik" to create beautiful traditional patterns</p>
+                    </div>
+
+                    <!-- Results Grid (hidden by default) -->
+                    <div id="resultsGrid"
+                        class="hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center">
+                        <!-- Generated images will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="method" class="py-20 px-6 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+                    Komponen <span class="text-amber-600">WGAN</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Wasserstein Generative Adversarial Network terdiri dari dua komponen utama yang bekerja secara
+                    adversarial
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Generator -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-amber-100">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl mr-4">
+                            🎨
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">Generator</h3>
+                            <p class="text-blue-600 font-medium">Pembuat Batik</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-semibold text-gray-900 mb-2">Fungsi Utama:</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Generator bertugas mengubah noise vector acak menjadi gambar batik yang realistis.
+                                Jaringan ini belajar untuk meniru distribusi data batik asli. Dengan tujuan utama menipu
+                                diskriminator agar menganggap hasilnya batik asli.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Generator Architecture Image -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
+                        <h4 class="font-semibold text-gray-900 mb-4 text-center">Arsitektur Generator</h4>
+                        <div class="bg-white rounded-lg p-4">
+                            <img src="/static/generator_architecture.jpg" alt="Generator Architecture"
+                                class="w-full h-48 object-contain rounded-lg"
+                                onError="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <!-- Fallback content for Generator -->
+                            <div
+                                class="hidden w-full h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-4xl mb-2">🏗️</div>
+                                    <div class="text-sm font-semibold text-blue-800">Generator Architecture</div>
+                                    <div class="text-xs text-blue-600">Noise → Transposed Conv → Batik</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discriminator/Critic -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-amber-100">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-2xl mr-4">
+                            🔍
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">Discriminator</h3>
+                            <p class="text-red-600 font-medium">Penilai Kualitas</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-semibold text-gray-900 mb-2">Fungsi Utama:</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Discriminator menilai apakah gambar batik adalah asli (dari dataset) atau palsu (dari
+                                generator).
+                                Dalam WGAN, ini disebut "Critic" yang memberikan Wasserstein distance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Discriminator Architecture Image -->
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl border border-red-200">
+                        <h4 class="font-semibold text-gray-900 mb-4 text-center">Arsitektur Discriminator</h4>
+                        <div class="bg-white rounded-lg p-4">
+                            <img src="/static/discriminator_architecture.jpg" alt="Discriminator Architecture"
+                                class="w-full h-48 object-contain rounded-lg"
+                                onError="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                            <!-- Fallback content for Discriminator -->
+                            <div
+                                class="hidden w-full h-48 bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-4xl mb-2">🔍</div>
+                                    <div class="text-sm font-semibold text-red-800">Discriminator Architecture</div>
+                                    <div class="text-xs text-red-600">Batik → Conv → Score</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-6">
+        <div class="container mx-auto text-center">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+                <div
+                    class="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">🎨</span>
+                </div>
+                <div class="text-2xl font-bold">
+                    <span class="text-white">Batik</span>
+                    <span class="text-amber-400">Generation</span>
+                </div>
+            </div>
+            <p class="text-gray-400 mb-4">
+                Preserving Indonesian culture through AI technology
+            </p>
+            <a href="../" class="text-amber-400 hover:text-amber-300 transition-colors duration-300">
+                ← Back to Trunojoyo AI
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile submenu toggle
+        const mobilePenelitianBtn = document.getElementById('mobile-penelitian-btn');
+        const mobilePenelitianSubmenu = document.getElementById('mobile-penelitian-submenu');
+        const mobilePenelitianIcon = document.getElementById('mobile-penelitian-icon');
+
+        mobilePenelitianBtn.addEventListener('click', () => {
+            mobilePenelitianSubmenu.classList.toggle('hidden');
+            mobilePenelitianIcon.classList.toggle('rotate-180');
+        });
+
+        // Generator functionality
+        const generateBtn = document.getElementById('generateBtn');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const emptyState = document.getElementById('emptyState');
+        const resultsGrid = document.getElementById('resultsGrid');
+
+        generateBtn.addEventListener('click', async function () {
+            // Start loading state
+            generateBtn.disabled = true;
+            btnText.textContent = 'Generating 8 images...';
+            btnIcon.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+            progressContainer.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+
+            try {
+                // Fixed parameters
+                const batchSize = 8;
+                const noiseDim = 128;
+                const seed = document.querySelector('input[type="number"]')?.value || null;
+
+                // Simulate progress
+                for (let i = 0; i <= 90; i += 10) {
+                    progressBar.style.width = i + '%';
+                    progressText.textContent = i + '%';
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+
+                // Call API endpoint with fixed parameters
+                const response = await fetch('/api/generate_batik', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        batch_size: batchSize,
+                        noise_dim: noiseDim,
+                        seed: seed ? parseInt(seed) : null
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Complete progress
+                progressBar.style.width = '100%';
+                progressText.textContent = '100%';
+
+                if (data.status === 'success') {
+                    displayResults(data.images);
+                } else {
+                    throw new Error(data.message || 'Generation failed');
+                }
+
+            } catch (error) {
+                console.error('Generation failed:', error);
+                alert(`Failed to generate batik: ${error.message}`);
+            } finally {
+                // Reset button state
+                generateBtn.disabled = false;
+                btnText.textContent = 'Generate 8 Batik Images';
+                btnIcon.classList.remove('hidden');
+                loadingSpinner.classList.add('hidden');
+                progressContainer.classList.add('hidden');
+            }
+        });
+
+        function displayResults(images) {
+            resultsGrid.innerHTML = '';
+            resultsGrid.classList.remove('hidden');
+
+            images.forEach((imageData, index) => {
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'relative group w-32 h-32';
+                imageContainer.innerHTML = `
+                    <img 
+                        src="${imageData.image_base64}" 
+                        alt="Generated Batik ${index + 1}" 
+                        class="w-full h-full object-cover rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-300"
+                    />
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                        <button 
+                            onclick="downloadImage('${imageData.download_data}', '${imageData.filename}')" 
+                            class="bg-white text-gray-900 px-2 py-1 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200 text-xs">
+                            Download
+                        </button>
+                    </div>
+                `;
+                resultsGrid.appendChild(imageContainer);
+            });
+        }
+
+        function downloadImage(base64Data, filename) {
+            // Create download link from base64 data
+            const link = document.createElement('a');
+            link.href = base64Data;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu after clicking
+                    mobileMenu.classList.add('hidden');
+                    mobilePenelitianSubmenu.classList.add('hidden');
+                    mobilePenelitianIcon.classList.remove('rotate-180');
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside (for desktop)
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.group')) {
+                // This will naturally close dropdowns when clicking outside due to :hover pseudo-class
+            }
+        });
+    </script>
+</body>
+
+</html>
